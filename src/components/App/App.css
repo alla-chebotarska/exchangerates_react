@@ -1,0 +1,21 @@
+.grid-container{
+    display: grid;
+    grid-template-areas: 'exchangeRateTable converter';
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.exchange-rates-table{
+   grid-area: exchangeRateTable;
+}
+
+.converter{
+    grid-area: converter;
+}
+
+@media only screen and (max-width: 768px) {
+   .grid-container{
+       grid-template-areas: 'exchangeRateTable'
+       'converter';
+   }
+  }
