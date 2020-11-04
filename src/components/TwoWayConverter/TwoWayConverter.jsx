@@ -98,26 +98,28 @@ class TwoWayConverter extends React.Component {
         return (
             <div className={this.props.className}>
                 <h4>Currency converter</h4>
-                <div>
+                <div className='convertor-container'>
                     <select
                         value={this.state.baseCurrency}
-                        onChange={this.changeBaseCurrencyState}>
+                        onChange={this.changeBaseCurrencyState}
+                        className='two-way-select-currency'>
                         {currencyOptions}
                     </select>
                     <input
                         type='number'
                         value={this.state.amountA}
-                        onChange={this.onChangeAmountA}></input>
-                </div>
-                <div>
+                        onChange={this.onChangeAmountA}
+                        className='two-way-input-amount'></input>
                     <select
-                        onChange={this.changeconvertToCurrency}>
+                        onChange={this.changeconvertToCurrency}
+                        className='two-way-select-currency'>
                         {currencyOptions}
                     </select>
                     <input
                         type='number'
                         value={this.state.amountB}
-                        onChange={this.onChangeAmountB}></input>
+                        onChange={this.onChangeAmountB}
+                        className='two-way-input-amount'></input>
                 </div>
             </div>
         )
