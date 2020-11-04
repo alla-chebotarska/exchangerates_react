@@ -45,6 +45,7 @@ class Converter extends React.Component {
 
         return (
             <div className={this.props.className}>
+                <h4>Currency converter to UAH</h4>
                 <div className='baseCurrency'>
                     <select 
                         value={this.state.currA} 

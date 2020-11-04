@@ -36,6 +36,7 @@ class ExchangeRatesTable extends React.Component {
 
         return (
             <div className={this.props.className}>
+                <h4>Exhange rate table</h4>
                 {rows.length === 0 ? "Loading" :
                     <div>
                         <table>

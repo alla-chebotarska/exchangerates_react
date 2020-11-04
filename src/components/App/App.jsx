@@ -3,6 +3,7 @@ import React from 'react';
 import Converter from '../Converter/Converter';
 import ExchangeRatesTable from '../ExchangeRatesTable/ExchangeRatesTable';
 import Header from '../Header/Header';
+import TwoWayConverter from "../TwoWayConverter/TwoWayConverter";
 import './App.css';
 
 
@@ -34,6 +35,7 @@ class App extends React.Component {
                 <Header className="header"/>
                 <ExchangeRatesTable className="exchange-rates-table" rates={this.state.rates}/>
                 <Converter className="converter" rates={this.state.rates}/>
+                <TwoWayConverter className="two-way-convertor"></TwoWayConverter>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 .grid-container {
     display: grid;
-    grid-template-areas: 'header' 'exchangeRateTable' 'converter';
+    grid-template-areas: 'header' 'exchangeRateTable' 'converter' 'twoWayConvertor';
     row-gap: 20px;
 }
 
@@ -11,22 +11,29 @@
 
 .exchange-rates-table {
     grid-area: exchangeRateTable;
-    margin: 0 5%;
+    margin: 0 3%;
     background-color: #FFFFFF;
     box-shadow: 6px 6px 5px -1px rgba(0, 0, 0, 0.2);
 }
 
 .converter {
     grid-area: converter;
-    margin: 0 5%;
+    margin: 0 3%;
     background-color: #FFFFFF;
     box-shadow: 6px 6px 5px -1px rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (min-width: 768px) {
+.two-way-convertor{
+    grid-area: twoWayConvertor;
+    margin: 0 3%;
+    background-color: #FFFFFF;
+    box-shadow: 6px 6px 5px -1px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 992px) {
     .grid-container {
-        grid-template-areas: 'header header' 'exchangeRateTable converter';
-        column-gap: 5%;
+        grid-template-areas: 'header header header' 'exchangeRateTable converter twoWayConvertor';
+        column-gap: 3%;
         padding: 0 5%;
     }
 
