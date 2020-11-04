@@ -1,8 +1,11 @@
+import { Button } from "@blueprintjs/core";
 import React from 'react';
 import Converter from '../Converter/Converter';
 import ExchangeRatesTable from '../ExchangeRatesTable/ExchangeRatesTable';
-
+import Header from '../Header/Header';
 import './App.css';
+
+
 
 class App extends React.Component {
 
@@ -28,6 +31,7 @@ class App extends React.Component {
     render() {
         return (
             <div className='grid-container'>
+                <Header className="header"/>
                 <ExchangeRatesTable className="exchange-rates-table" rates={this.state.rates}/>
                 <Converter className="converter" rates={this.state.rates}/>
             </div>

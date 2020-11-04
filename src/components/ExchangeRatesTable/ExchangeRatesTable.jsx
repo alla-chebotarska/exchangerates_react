@@ -1,3 +1,4 @@
+import { Button } from '@blueprintjs/core';
 import React from 'react';
 
 import './ExchangeRatesTable.css';
@@ -50,7 +51,10 @@ class ExchangeRatesTable extends React.Component {
                             </tbody>
                         </table>
                         <div className='button-container'>
-                            <button onClick={onExpandChange}>{this.state.expanded ? "Show less" : "Show more"}</button>
+                            <Button 
+                            onClick={onExpandChange}>
+                                {this.state.expanded ? "Show less" : "Show more"}
+                            </Button>
                         </div>
                     </div>
                 }

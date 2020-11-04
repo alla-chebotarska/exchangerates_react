@@ -1,21 +1,40 @@
-.grid-container{
+.grid-container {
     display: grid;
-    grid-template-areas: 'exchangeRateTable converter';
-    column-gap: 20px;
+    grid-template-areas: 'header' 'exchangeRateTable' 'converter';
     row-gap: 20px;
 }
 
-.exchange-rates-table{
-   grid-area: exchangeRateTable;
+.header {
+    grid-area: header;
+    text-align: center;
 }
 
-.converter{
+.exchange-rates-table {
+    grid-area: exchangeRateTable;
+    margin: 0 5%;
+    background-color: #FFFFFF;
+    box-shadow: 6px 6px 5px -1px rgba(0, 0, 0, 0.2);
+}
+
+.converter {
     grid-area: converter;
+    margin: 0 5%;
+    background-color: #FFFFFF;
+    box-shadow: 6px 6px 5px -1px rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (max-width: 768px) {
-   .grid-container{
-       grid-template-areas: 'exchangeRateTable'
-       'converter';
-   }
-  }
+@media only screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-areas: 'header header' 'exchangeRateTable converter';
+        column-gap: 5%;
+        padding: 0 5%;
+    }
+
+    .exchange-rates-table {
+        margin: 0;
+    }
+    
+    .converter {
+        margin: 0;
+    }
+}

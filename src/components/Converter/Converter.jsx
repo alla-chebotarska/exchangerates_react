@@ -30,13 +30,13 @@ class Converter extends React.Component {
             return 0;
         }
         let rate = this.props.rates.find(item => item.cc === this.state.currA).rate;
-        let convertedValue = this.state.amountA * rate;
+        let convertedValue = (this.state.amountA * rate).toFixed(3);
         return convertedValue;
     }
 
     render() {
         const converterCurrensies = ["USD", "EUR", "PLN", "RUB", "UAH"];
-        let curForConvert = this.props.rates.filter((item) => converterCurrensies.includes(item.cc))
+        let currencyChoice = this.props.rates
             .map((item) =>
                 <option key={item.cc}>{item.cc}</option>
             );
@@ -45,12 +45,21 @@ class Converter extends React.Component {
 
         return (
             <div className={this.props.className}>
-                <div>
-                    <select value={this.state.currA} onChange={this.currencyAChanged}>{curForConvert}</select>
-                    <input value={this.state.amountA} onChange={this.amountAChanged} />
+                <div className='baseCurrency'>
+                    <select 
+                        value={this.state.currA} 
+                        onChange={this.currencyAChanged} 
+                        className='selectCurrency'>
+                            {currencyChoice}
+                    </select>
+                    <input 
+                        value={this.state.amountA} 
+                        onChange={this.amountAChanged} 
+                        type='number'
+                        className='input-amountA' />
                 </div>
-                <div>
-                    <div>UAH {result}</div>
+                <div className='convertedamountB'>
+        <div>{this.state.amountA} {this.state.currA} is equal to <b>{result}</b> UAH</div>
                 </div>
             </div>
         )
